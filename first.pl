@@ -1,30 +1,60 @@
 #!/usr/bin/perl
 
- 
 
-sub arithmetic{
+
+sub addition{
+	$a=$_[0];
+	$b=$_[1];
+	return $a+$b;
+}
+sub subtraction{
+	$a=$_[0];
+	$b=$_[1];
+	return $a-$b;
+}
+sub multiplication{
+	$a=$_[0];
+	$b=$_[1];
+	return $a*$b;
+}
+sub modulus{
+	$a=$_[0];
+	$b=$_[1];
+	return $a%$b;
+}
+sub division{
+	$a=$_[0];
+	$b=$_[1];
+	return $a/$b;
+}
+
+#print 'addition of 2 numbers is', addition($a,$b);
 
 print "Enter two digits";
-my $a=<STDIN>;
-my $b=<STDIN>;
+my $a=<>;
+my $b=<>;
 
-use experimental qw(switch say); 
 
-print "Choose any option from 1-5";
-chomp( my $c = <> );  
+use Switch;
 
-given($c){
- when (1) { say 'Addition of numbers is', $a+$b ;}  
- when (2) { say 'Subtraction of number is', $a-$b ;}  
- when (3) { say 'Multiplication  is', $a*$b ;}
- when (4) { say 'Modulud is', $a%$b ;}
- when (5) { say 'division is', $a/$b ;}  
- default { say 'Enter btw 1 - 5';}  
+print 'enter a number';
+$c=<>;
+
+
+switch($c){
+
+case 1 {print 'addition of 2 numbers is', addition($a,$b);}
+case 2 {print 'subtraction of 2 numbers is', subtraction($a,$b);}
+case 3 {print 'multiplication of 2 numbers is', multiplication($a,$b);}
+case 4 {print 'modulus of 2 numbers is', modulus($a,$b);}
+case 5 {print 'division of 2 numbers is', division($a,$b);}
 
 }
-}
 
-arithmetic();
+
+
+
+
 
 
 
