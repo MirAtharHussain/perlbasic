@@ -64,18 +64,21 @@ say '5. Division as divide';
 		$num2=<>;
 		Modulus($num1, $num2);#Caling function and passing arguments to it.
 	}
-	case 'Divide'{
+	case 'divide'{
 		print 'Enter first number';
 		$num1=<>;
 		print 'Enter second number';
 		$num2=<>;
 		Division($num1, $num2);#Caling function and passing arguments to it.
 	}
+	else{
+		say 'Invalid Input';
+	}
 	
 	}#End of switch Statement
-	say 'If you want continue doing operation give Yes(1)/No(0):';#to reapet the operation
-	my $ch=<>;
-	}while($ch ne 0)
+	say 'If you want continue doing operation give Yes(1)/No(0):';#to repeat the operation
+	$ch=<>;
+	}while($ch!=0);
 }#End of simple_arithmetic function
 
 
